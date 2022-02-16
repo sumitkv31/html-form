@@ -25,7 +25,7 @@
         <ul>
           <li>
             <label for="user-name1">Name</label>
-            <input type="text" name="user-name" id="user-name1" value="sumit" />
+            <input type="text" name="user-name" id="user-name1" required placeholder="Sumit Kumar" />
           </li>
           <li>
             <label for="useremail">Your email</label>
@@ -33,7 +33,7 @@
           </li>
           <li>
             <label for="userpassword">Your password</label>
-            <input type="password" name="user-password" id="userpassword">
+            <input type="password" name="user-password" id="userpassword" required minlength="7">
           </li>
         </ul>
       </section>
@@ -43,11 +43,11 @@
         <ul>
           <li>
             <label for="userage">Your age</label>
-            <input type="number" step="2" name="user-age" id="userage">
+            <input type="number" step="1" name="user-age" id="userage" required min="18" max="100">
           </li>
           <li>
             <label for="birthdate">Your birthdate</label>
-            <input type="date" name="user-birthdate" id="birthdate">
+            <input type="date" name="user-birthdate" id="birthdate" required min="1921-01-24" max="2020-01-31">
           </li>
           <li>
             <label for="favorite-color">Your favorite color?</label>
@@ -62,7 +62,7 @@
 
       <section>
         <label for="usermessage">Your message</label>
-        <textarea name="user-message" id="usermessage"></textarea>
+        <textarea name="user-message" id="usermessage" required rows="5"></textarea>
       </section>
 
       <section>
@@ -109,8 +109,9 @@
 
 
 
-      <section>
-        <button>Submit</button>
+      <section id="butons">
+        <button type="submit" class="buton">Submit</button>
+        <button type="reset" class="buton">Clear</button>
       </section>
   </main>
 </body>
